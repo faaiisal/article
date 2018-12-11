@@ -9,8 +9,8 @@ var gulp        = require('gulp'),
 
   sass.compiler = require('node-sass');
 //load pkg
-var pkg         = require('./package.json'),
-    banner      = ['/**',
+var pkg         = require('./package.json')
+var banner      = ['/**',
                    '* <%=pkg.name%> - <%= pkg.description %>',
                    '* @author <%= pkg.author%>',
                    '* @version v<%= pkg.version %>',

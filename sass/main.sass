@@ -3,7 +3,7 @@ $family-sans: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Ari
 $family-serif: Georgia, Cambria, "Times New Roman", Times, serif
 //Reset
 html, body, div,
-h1, p
+h1, p,a
   margin: 0
   padding: 0
   border: 0
@@ -20,6 +20,139 @@ body
   &::before,
   &::after
     box-sizing: border-box
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a
+  background-color: transparent
+  border-style: none
+a:focus
+  text-decoration: none
+
+
+
+
+//style
+.header
+  position: relative
+  background-color: rgba(240, 219, 79, 1)
+  &__container
+    position: relative
+    max-width: 1072px
+    height: 110px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 20px
+    padding-right: 20px
+    &--content
+      position: relative
+      display: flex
+      height: 65px
+      padding-top: 20px
+    &--content--left
+      position: relative
+      flex: 1
+    &--content--right
+      position: relative
+      display: flex
+      .signin
+        margin-top: 5px
+        margin-right: 16px
+        color: #504000
+        fill: #504000
+        & a
+          text-decoration: none
+          color: #504000
+          fill: #504000
+
+
+
+    &--content--left--logo
+      position: relative
+      display: flex
+      height: 65px
+      .logo
+        &__image
+          position: relative
+          margin-right: 20px
+          background-color: #504000
+          color: rgba(240, 219, 79, 1)
+          width: 35px
+          height: 35px
+          display: flex
+          align-items: center
+          justify-content: center
+          font-size: 28px
+          font-weight: 700
+        &__height
+          border-right: 1px solid rgba(#000, .15)
+          height: 28px
+          margin-right: 20px
+          margin-top: 5px
+        &__copy
+          font-size: 20px
+          margin-top: 5px
+          margin-right: 20px
+          white-space: nowrap
+          border: 1px solid red
+          text-overflow: ellipsis
+          overflow: hidden
+        &__button
+          margin-top: 5px
+          border: 1px solid red
+          // @media screen and (max-width: 750px)
+          //   &__button
+          //     border: 1px solid green
+
+
+
+    &--menu
+      margin-left: -40px
+      height: 44px
+      margin-top: -5px
+.menu__nav ul li
+  list-style: none
+  display: inline-block
+.menu__nav--unorderlist .list
+  margin-right: 15px
+  font-size: 16px
+  line-height: 16px
+  color: #867400
+  fill: #867400
+  text-transform: uppercase
+.Button
+  border: 1px solid #867400
+  padding: 0 10px
+  font-size: 13px
+  color: #867400
+  fill: #867400
+  display: inline-block
+  position: relative
+  text-align: center
+  text-decoration: none
+  cursor: pointer
+  border-radius: 4px
+  background-color: transparent
+  vertical-align: top
+  white-space: nowrap
+  text-rendering: auto
+  user-select: none
+  letter-spacing: 0
+  font-weight: 400
+  font-style: normal
+  &__button--follow
+    color: black
+    height: 20px
+    font-size: 15px
+    line-height: 20px
+  &__Upper--button
+    font-size: 20px
+    height: 37px
+    line-height: 37px
+    padding: 0 16px
+
+
+
 .container
   max-width: 740px
   margin-left: auto

@@ -6,8 +6,40 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Medium</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
   </head>
   <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__container--content">
+          <div class="header__container--content--left">
+            <div class="header__container--content--left--logo">
+              <div class="logo">
+                <div class="logo__image">M</div>
+              </div>
+              <div class="logo__height"></div>
+              <div class="logo__copy">JavaScript In plain English</div>
+              <div class="logo__button">
+                <button class="Button Button__button--follow">Follow</button>
+              </div>
+            </div>
+          </div>
+          <div class="header__container--content--right">
+            <div class="signin"><a href="#">Sign in</a></div>
+            <button class="Button Button__Upper--button">Get started</button>
+          </div>
+        </div>
+        <div class="header__container--menu">
+          <nav class="menu__nav">
+            <ul class="menu__nav--unorderlist">
+              <li class="menu__nav--unorderlist list">Home</li>
+              <li class="menu__nav--unorderlist list">Join our writing team</li>
+              <li class="menu__nav--unorderlist list"><span class="search"><i class="fas fa-search"></i></span></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
     <div class="container">
       <h1>How to Build a Simple Chrome Extension in Vanilla JavaScript</h1>
       <p>Today, I’m going to show you how to make Chrome extension in vanilla JavaScript — that is,
@@ -20,24 +52,6 @@
         If you have your own idea for an extension, however, and just want to know what to
         add to your existing project files to get it working in Chrome, you can skip down to the section on customizing your own manifest.json file and icon.
       </p>
-      <h1>About Chrome Extensions</h1>
-      <p>
-        A Chrome extension is essentially just a group of files that customizes your experience in the Google Chrome browser. There are a few different kinds of Chrome extensions; some activate when a certain condition is met, like when you’re on a store checkout page; some only pop up when you click on an icon; and some appear each time you open a new tab. Both of the extensions that I published this year are ‘new tab’ extensions; the first is Compliment Dash, a dashboard that keeps a to-do list and compliments the user, and the second is a tool for pastors called Liturgical.li. If you know how to code a basic website, then you can code this kind of extension without too much difficulty.
-      </p>
-      <h1>Prerequisites</h1>
-      <p>
-        We’re going to keep things simple, so in this tutorial, we’ll just be using HTML,
-        CSS, and some basic JavaScript, as well as customizing a manifest.json file that
-        I’ll include below. Chrome extensions vary in complexity, so building a Chrome
-        extension can be as simple or complicated as you want it to be. After you learn
-        the basics here, you’ll be able to create something much more complicated using your own skillset.
-      </p>
-      <h1>Setting Up Your Files</h1>
-      <p>
-        For this tutorial, we’re going to create a simple dashboard that greets the user by name. Let’s call our extension Simple Greeting Dashboard.
-        To get started, you’ll want to create three files: index.html, main.css, and main.js. Put these in their own folder. Next, fill the HTML file with basic HTML document setup, and connect it to the CSS and JS files:
-      </p>
     </div>
   </body>
-
 </html>

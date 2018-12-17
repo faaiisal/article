@@ -44,7 +44,8 @@ a:focus {
   .header__menuone {
     height: 65px;
     position: relative;
-    display: flex; }
+    display: flex;
+    margin-top: -5px; }
     .header__menuone--left {
       position: relative;
       flex: 5; }

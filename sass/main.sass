@@ -145,11 +145,12 @@ h1
     margin-left: 16px
     margin-top: 5px
     &--title
-      font-size: 16px
+      font-size: 14px
       font-weight: 400
       line-height: 20px
       color: rgba(#000, .84)
       fill: rgba(#000, .84)
+      font-family: $family-sans
     &--title a
       color: rgba(#000, .84)
       fill: rgba(#000, .84)
@@ -157,14 +158,18 @@ h1
     &--title .follow
       margin-left: 10px
     &--copy
+      font-size: 14px
       margin-top: 5px
-      color: rgba(#000, .84)
+      color: rgba(#000, .54)
+      fill: rgba(#000, .54)
+      font-family: $family-sans
     &--copy .middotDivider
       &::after
         content: "\00B7"
     &--copy .readingTime
       &::after
         content: attr(title)
+
 p
   font-size: 21px
   line-height: 34px
@@ -187,11 +192,12 @@ p
 	font-size: 16px
 	line-height: 1.5
 	border-radius: 4px
+  font-family: $family-sans
 .button--follow
   background-color: transparent
   height: 19px
-  padding: 0 16px
-  font-size: 15px
+  padding: 0 10px
+  font-size: 14px
   line-height: 19px
   color: #867400
   text-transform: capitalize

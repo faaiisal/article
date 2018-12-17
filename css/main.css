@@ -142,11 +142,12 @@ h1 {
     margin-left: 16px;
     margin-top: 5px; }
     .profile__content--title {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 20px;
       color: rgba(0, 0, 0, 0.84);
-      fill: rgba(0, 0, 0, 0.84); }
+      fill: rgba(0, 0, 0, 0.84);
+      font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
     .profile__content--title a {
       color: rgba(0, 0, 0, 0.84);
       fill: rgba(0, 0, 0, 0.84);
@@ -154,8 +155,11 @@ h1 {
     .profile__content--title .follow {
       margin-left: 10px; }
     .profile__content--copy {
+      font-size: 14px;
       margin-top: 5px;
-      color: rgba(0, 0, 0, 0.84); }
+      color: rgba(0, 0, 0, 0.54);
+      fill: rgba(0, 0, 0, 0.54);
+      font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
     .profile__content--copy .middotDivider::after {
       content: "\00B7"; }
     .profile__content--copy .readingTime::after {
@@ -183,13 +187,14 @@ p {
   padding: 5px 10px;
   font-size: 16px;
   line-height: 1.5;
-  border-radius: 4px; }
+  border-radius: 4px;
+    border-radius-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
 .button--follow {
   background-color: transparent;
   height: 19px;
-  padding: 0 16px;
-  font-size: 15px;
+  padding: 0 10px;
+  font-size: 14px;
   line-height: 19px;
   color: #867400;
   text-transform: capitalize; }

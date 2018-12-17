@@ -77,7 +77,7 @@ a:focus {
       text-transform: capitalize;
       letter-spacing: normal;
       line-height: 20px;
-      margin: 5px 20px 5px 0px;
+      margin: 5px 18px 5px 0px;
       text-overflow: ellipsis;
       white-space: nowrap;
       color: rgba(0, 0, 0, 0.68); }
@@ -100,7 +100,7 @@ a:focus {
       margin-right: 16px; }
   .header__menutwo {
     position: relative;
-    margin-top: -30px;
+    margin-top: -25px;
     margin-left: -50px; }
     .header__menutwo--menu .menuitem .menulist {
       list-style: none;
@@ -125,7 +125,7 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.63;
   color: rgba(0, 0, 0, 0.84);
-  margin-top: 30px;
+  padding-top: 30px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
 p {

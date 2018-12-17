@@ -95,7 +95,8 @@ a:focus {
       font-size: 16px;
       line-height: 16px;
       text-overflow: ellipsis;
-      white-space: nowrap; }
+      white-space: nowrap;
+      margin-right: 16px; }
   .header__menutwo {
     position: relative;
     margin-top: -30px;
@@ -123,16 +124,49 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.63;
   color: rgba(0, 0, 0, 0.84);
-  margin-top: 30pxpu;
+  padding-top: 30px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+
+.profile {
+  position: relative;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px; }
+  .profile__image {
+    position: relative; }
+    .profile__image--img {
+      border-radius: 100%;
+      width: 55px;
+      height: 55px; }
+  .profile__content {
+    margin-left: 16px;
+    margin-top: 5px; }
+    .profile__content--title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.84);
+      fill: rgba(0, 0, 0, 0.84); }
+    .profile__content--title a {
+      color: rgba(0, 0, 0, 0.84);
+      fill: rgba(0, 0, 0, 0.84);
+      text-decoration: none; }
+    .profile__content--title .follow {
+      margin-left: 10px; }
+    .profile__content--copy {
+      margin-top: 5px;
+      color: rgba(0, 0, 0, 0.84); }
+    .profile__content--copy .middotDivider::after {
+      content: "\00B7"; }
+    .profile__content--copy .readingTime::after {
+      content: attr(title); }
 
 p {
   font-size: 21px;
   line-height: 34px;
   font-weight: 400;
   letter-spacing: -0.063;
-  color: rgba(0, 0, 0, 0.84);
-  margin-top: 25px; }
+  color: rgba(0, 0, 0, 0.84); }
   p:last-child {
     margin-bottom: 30px; }
   p + p {
@@ -154,10 +188,11 @@ p {
 .button--follow {
   background-color: transparent;
   height: 19px;
-  padding: 0 10px;
-  margin-top: 6px;
+  padding: 0 16px;
+  font-size: 15px;
   line-height: 19px;
-  color: #867400; }
+  color: #867400;
+  text-transform: capitalize; }
 
 .button--getstart {
   border-color: #635200;

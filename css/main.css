@@ -44,7 +44,8 @@ a:focus {
   .header__menuone {
     height: 65px;
     position: relative;
-    display: flex; }
+    display: flex;
+    margin-top: -5px; }
     .header__menuone--left {
       position: relative;
       flex: 5; }
@@ -57,10 +58,9 @@ a:focus {
       background-color: #504000;
       margin-right: 20px; }
     .header__menuone--leftlogo .logo {
-      display: flex;
-      font-size: 32px;
-      align-items: center;
-      justify-content: center;
+      font-size: 26px;
+      padding-left: 5px;
+      padding-top: 3px;
       font-weight: 700;
       color: #f0db4f;
       font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
@@ -77,7 +77,7 @@ a:focus {
       text-transform: capitalize;
       letter-spacing: normal;
       line-height: 20px;
-      margin: 5px 20px 5px 0px;
+      margin: 5px 18px 5px 0px;
       text-overflow: ellipsis;
       white-space: nowrap;
       color: rgba(0, 0, 0, 0.68); }
@@ -95,10 +95,12 @@ a:focus {
       font-size: 16px;
       line-height: 16px;
       text-overflow: ellipsis;
-      white-space: nowrap; }
+      white-space: nowrap;
+      color: #504000;
+      margin-right: 16px; }
   .header__menutwo {
     position: relative;
-    margin-top: -30px;
+    margin-top: -25px;
     margin-left: -50px; }
     .header__menutwo--menu .menuitem .menulist {
       list-style: none;
@@ -123,7 +125,7 @@ h1 {
   font-weight: 700;
   letter-spacing: -0.63;
   color: rgba(0, 0, 0, 0.84);
-  margin-top: 30px;
+  padding-top: 30px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
 p {
@@ -145,7 +147,7 @@ p {
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid #867400;
+  border: 1px solid transparent;
   padding: 5px 10px;
   font-size: 16px;
   line-height: 1.5;
@@ -157,9 +159,14 @@ p {
   padding: 0 10px;
   margin-top: 6px;
   line-height: 19px;
-  color: #867400; }
+  color: #867400;
+  border-color: #867400; }
 
 .button--getstart {
   border-color: #635200;
   background-color: transparent;
-  color: #504000; }
+  color: #504000;
+  height: 37px;
+  line-height: 37px;
+  padding: 0px 16px;
+  border: 1px solid #504000; }

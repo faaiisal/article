@@ -59,8 +59,8 @@ a:focus {
       margin-right: 20px; }
     .header__menuone--leftlogo .logo {
       font-size: 26px;
-      padding-left: 5px;
-      padding-top: 3px;
+      padding-top: 2px;
+      padding-left: 4px;
       font-weight: 700;
       color: #f0db4f;
       font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
@@ -77,7 +77,7 @@ a:focus {
       text-transform: capitalize;
       letter-spacing: normal;
       line-height: 20px;
-      margin: 5px 18px 5px 0px;
+      margin: 5px 20px 5px 0px;
       text-overflow: ellipsis;
       white-space: nowrap;
       color: rgba(0, 0, 0, 0.68); }
@@ -96,11 +96,10 @@ a:focus {
       line-height: 16px;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: #504000;
       margin-right: 16px; }
   .header__menutwo {
     position: relative;
-    margin-top: -25px;
+    margin-top: -30px;
     margin-left: -50px; }
     .header__menutwo--menu .menuitem .menulist {
       list-style: none;
@@ -128,13 +127,46 @@ h1 {
   padding-top: 30px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
+.profile {
+  position: relative;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px; }
+  .profile__image {
+    position: relative; }
+    .profile__image--img {
+      border-radius: 100%;
+      width: 55px;
+      height: 55px; }
+  .profile__content {
+    margin-left: 16px;
+    margin-top: 5px; }
+    .profile__content--title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.84);
+      fill: rgba(0, 0, 0, 0.84); }
+    .profile__content--title a {
+      color: rgba(0, 0, 0, 0.84);
+      fill: rgba(0, 0, 0, 0.84);
+      text-decoration: none; }
+    .profile__content--title .follow {
+      margin-left: 10px; }
+    .profile__content--copy {
+      margin-top: 5px;
+      color: rgba(0, 0, 0, 0.84); }
+    .profile__content--copy .middotDivider::after {
+      content: "\00B7"; }
+    .profile__content--copy .readingTime::after {
+      content: attr(title); }
+
 p {
   font-size: 21px;
   line-height: 34px;
   font-weight: 400;
   letter-spacing: -0.063;
-  color: rgba(0, 0, 0, 0.84);
-  margin-top: 25px; }
+  color: rgba(0, 0, 0, 0.84); }
   p:last-child {
     margin-bottom: 30px; }
   p + p {
@@ -147,7 +179,7 @@ p {
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid transparent;
+  border: 1px solid #867400;
   padding: 5px 10px;
   font-size: 16px;
   line-height: 1.5;
@@ -156,17 +188,13 @@ p {
 .button--follow {
   background-color: transparent;
   height: 19px;
-  padding: 0 10px;
-  margin-top: 6px;
+  padding: 0 16px;
+  font-size: 15px;
   line-height: 19px;
   color: #867400;
-  border-color: #867400; }
+  text-transform: capitalize; }
 
 .button--getstart {
   border-color: #635200;
   background-color: transparent;
-  color: #504000;
-  height: 37px;
-  line-height: 37px;
-  padding: 0px 16px;
-  border: 1px solid #504000; }
+  color: #504000; }

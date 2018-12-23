@@ -31,86 +31,6 @@ a {
 a:focus {
   text-decoration: none; }
 
-.header {
-  background-color: #f0db4f; }
-  .header__container {
-    max-width: 1072px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 5px; }
-  .header__menuone {
-    height: 65px;
-    position: relative;
-    display: flex;
-    margin-top: -5px; }
-    .header__menuone--left {
-      position: relative;
-      flex: 5; }
-    .header__menuone--leftmenu {
-      position: relative;
-      display: flex; }
-    .header__menuone--leftlogo {
-      width: 35px;
-      height: 35px;
-      background-color: #504000;
-      margin-right: 20px; }
-    .header__menuone--leftlogo .logo {
-      font-size: 26px;
-      padding-top: 2px;
-      padding-left: 4px;
-      font-weight: 700;
-      color: #f0db4f;
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
-    .header__menuone--leftheight {
-      position: relative;
-      border-right: 1px solid rgba(0, 0, 0, 0.15);
-      height: 28px;
-      margin-right: 20px;
-      margin-top: 3px; }
-    .header__menuone--leftcontent {
-      font-size: 20px;
-      font-weight: 700;
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-      text-transform: capitalize;
-      letter-spacing: normal;
-      line-height: 20px;
-      margin: 5px 20px 5px 0px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: rgba(0, 0, 0, 0.68); }
-    .header__menuone--leftfollow {
-      position: relative; }
-    .header__menuone--right {
-      flex: 1; }
-    .header__menuone--rightmenu {
-      position: relative;
-      display: flex; }
-    .header__menuone--rightsignin {
-      position: relative;
-      flex: 1;
-      margin: 10px auto;
-      font-size: 16px;
-      line-height: 16px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      margin-right: 16px; }
-  .header__menutwo {
-    position: relative;
-    margin-top: -30px;
-    margin-left: -50px; }
-    .header__menutwo--menu .menuitem .menulist {
-      list-style: none;
-      display: inline-block;
-      margin: 0 10px;
-      text-transform: uppercase;
-      font-size: 16px;
-      cursor: pointer;
-      color: rgba(0, 0, 0, 0.54);
-      fill: rgba(0, 0, 0, 0.54); }
-
 .container {
   max-width: 740px;
   margin-left: auto;
@@ -127,50 +47,13 @@ h1 {
   padding-top: 30px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
 
-.profile {
-  position: relative;
-  display: flex;
-  margin-top: 24px;
-  margin-bottom: 24px; }
-  .profile__image {
-    position: relative; }
-    .profile__image--img {
-      border-radius: 100%;
-      width: 50px;
-      height: 50px; }
-  .profile__content {
-    margin-left: 16px;
-    margin-top: 5px; }
-    .profile__content--title {
-      font-size: 14px;
-      font-weight: 400;
-      color: rgba(0, 0, 0, 0.84);
-      fill: rgba(0, 0, 0, 0.84);
-      font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-      line-height: 14px;
-      padding-bottom: 3px; }
-    .profile__content--title a {
-      color: rgba(0, 0, 0, 0.84);
-      fill: rgba(0, 0, 0, 0.84);
-      text-decoration: none; }
-    .profile__content--title .follow {
-      margin-left: 10px; }
-    .profile__content--copy {
-      font-size: 14px;
-      color: rgba(0, 0, 0, 0.54);
-      fill: rgba(0, 0, 0, 0.54);
-      font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
-    .profile__content--copy .middotDivider::after {
-      content: "\00B7"; }
-    .profile__content--copy .readingTime::after {
-      content: attr(title); }
-
 p {
   font-size: 21px;
   line-height: 34px;
   font-weight: 400;
   letter-spacing: -0.063;
-  color: rgba(0, 0, 0, 0.84); }
+  color: rgba(0, 0, 0, 0.84);
+  margin-top: 25px; }
   p:last-child {
     margin-bottom: 30px; }
   p + p {

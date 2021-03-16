@@ -1,6 +1,6 @@
 //font-family variables
-$family-sans: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif
-$family-serif: Georgia, Cambria, "Times New Roman", Times, serif
+$family-serif: 'Lora', serif;
+$family-sans-serif: 'Poppins', sans-serif;
 // $responsive:
 //Reset
 html, body, div,
@@ -14,7 +14,12 @@ body
   margin: 0
   overflow-x: hidden
   word-break: break-word
-  font-family: $family-serif
+  font-family: $family-sans-serif
+  font-weight: 400
+  font-size: 100%
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
 // box-sizing
 *
   &,
@@ -32,53 +37,724 @@ a:focus
 
 //style
 //body style
-.container
-  max-width: 740px
-  margin-left: auto
-  margin-right: auto
-  padding-left: 20px
-  padding-right: 20px
-h1
-  font-size: 42px
-  line-height: 43px
-  font-weight: 700
-  letter-spacing: -0.63
-  color: rgba(#000, .84)
-  padding-top: 30px
-  font-family: $family-sans
-p
-  font-size: 21px
-  line-height: 34px
-  font-weight: 400
-  letter-spacing: -0.063
-  color: rgba(#000, .84)
-  margin-top: 25px
-  &:last-child
-    margin-bottom: 30px
-  + p
-    margin-top: 30px
-.Button
-	display: inline-block
-	font-weight: 400
-	text-align: center
-	white-space: nowrap
-	vertical-align: middle
-	user-select: none
-	border: 1px solid #867400
-	padding: 5px 10px
-	font-size: 16px
-	line-height: 1.5
-	border-radius: 4px
-  font-family: $family-sans
-.button--follow
+.header 
+  position: relative 
+  &__container
+  &__brand 
+    padding-right: 30px
+  &__list
+  &__item
+    &:not(:last-child)
+      margin-right: 25px
+  &__link  
+    font-size: 16px
+    line-height: 1.5em 
+    text-transform: uppercase
+    color: #8F91B0 !important
+    white-space: nowrap
+    &:hover 
+      color: #2D1863 !important
+  &:before 
+    content: ""
+    display: table 
+    clear: both 
+.banner 
+  position: relative
+  &__container
+    padding-bottom: 150px
+  &__row 
+  &__content
+    position: relative
+    display: flex  
+  &__wrap 
+    align-items: center 
+    align-content: center
+    justify-content: center
+    padding-top: 140px
+    width: 100%
+    &--content 
+      margin: 0px 0px 16px 0px
+      padding: 0px 0px 0px 15px
+      border-style: solid
+      border-width: 0px 0px 0px 3px
+      border-color: #FFD43A
+    &--text 
+      font-size: 16px
+      text-transform: uppercase
+      font-family: $family-sans-serif
+    &--title 
+    color: #2D1863
+    font-family: "Abril Fatface", Sans-serif
+    font-size: 72px
+    font-weight: 400
+    line-height: 1.5em
+    padding-bottom: 20px
+    &--copy 
+      color: #8F91B0
+      font-family: $family-sans-serif
+      font-size: 16px
+      font-weight: 400
+      line-height: 1.5em
+  &__hero
+    margin: -51px -100px 0px 0px
+    min-width: 510px
+    min-height: 668px
+    &--img 
+      width: 100% 
+  &__object 
+    position: absolute 
+    right: -36%
+    top: -4%
+    &--img 
+      max-width: 80%
+  &__circle 
+    position: absolute
+    left: -25%
+    bottom: 37%
+  &__buttonGroup
+    position: relative
+    &--contact 
+      font-family: $family-sans-serif 
+      font-size: 18px 
+      font-weight: 400 
+      line-height: 1.5em 
+      fill: #ffffff 
+      color: #ffffff 
+      background-color: #6F34FE
+      border-radius: 20px 20px 20px 20px
+      padding: 15px 35px 15px 35px
+      margin-right: 30px
+      &:hover 
+        color: #6F34FE
+        background-color: #FFD43A
+    &--download 
+      font-family: $family-sans-serif
+      font-size: 18px
+      font-weight: 400
+      line-height: 1.5em
+      fill: #6F34FE
+      color: #6F34FE
+      background-color: rgba(255, 255, 255, 0)
+      border-style: solid
+      border-width: 0px 0px 3px 0px
+      border-color: #FFD43A
+      border-radius: 0px 0px 0px 0px
+      padding: 0px 0px 4px 0px
+      &:hover 
+        border-color: #6F34FE
+  &__doted  
+    position: absolute
+    left: 33%
+    bottom: -45%
+.about
+  position: relative
   background-color: transparent
-  height: 19px
-  padding: 0 10px
-  font-size: 14px
-  line-height: 19px
-  color: #867400
-  text-transform: capitalize
-.button--getstart
-  border-color: #635200
-  background-color: transparent
-  color: #504000
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  padding: 130px 0px 130px 0px
+  &__content 
+    background-image: url("/assets/object-5.png")
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: 50% auto
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+    width: 100%
+    position: relative 
+    display: flex 
+    &--wrap 
+      position: relative 
+      display: flex 
+      flex-wrap: wrap 
+      align-content: flex-end
+      align-items: flex-end
+      width: 100% 
+    &--item 
+      margin: 0px 25px 50px 0px
+      padding: 45px 45px 45px 45px
+      background-color: #FFFFFF
+      border-radius: 50px 50px 0px 50px
+      transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
+      box-sizing: border-box
+      &Design
+        margin: 0px 0px 0px 25px
+        border-radius: 50px 50px 50px 0px
+      &Testing
+        margin: 0px 25px 50px 0px
+        border-radius: 50px 0px 50px 50px
+      &Prototyping 
+        margin: 0px 0px 0px 25px
+        border-radius: 0px 50px 50px 50px
+      &Skills
+        padding: 40px 30px 40px 30px
+        border-radius: 20px 20px 20px 20px
+        z-index: 11
+    &--Doted 
+      position: absolute
+      left: -9% 
+      top: 60% 
+      z-index: 0
+      &Animation 
+        --translateX: 16.25px
+        --translateY: -19.8367px
+        transform: translateX(var(--translateX))translateY(var(--translateY))
+        transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
+    &--container 
+    &--card 
+      position: relative
+      &Icon 
+        text-align: center 
+        height: auto 
+        &Img 
+          width: 100px 
+        &Title 
+          color: #2D1863
+          font-family: $family-sans-serif
+          font-size: 18px
+          font-weight: 500
+          line-height: 1.5em
+          margin: 0px 0px 15px 0px
+          text-align: left
+        &Copy 
+          margin: 0px 0px 30px 0px
+          color: #8F91B0
+          font-family: $family-sans-serif
+          font-size: 14px
+          font-weight: 400
+          line-height: 1.5em
+          max-width: 185px
+          width: 185px
+          height: 84px
+          text-align: left 
+      &Content 
+        padding: 0
+      &Title 
+        color: #2D1863
+        font-family: $family-sans-serif
+        font-size: 20px
+        font-weight: 500
+        line-height: 1.5em
+        margin: 20px 0px 0px 0px
+    
+  &__concept 
+    position: relative
+    display: flex 
+    flex-wrap: wrap 
+    align-items: center
+    align-content: center
+    width: 100%
+    &--wrap 
+      padding-top: 20px
+      padding-left: 50px 
+      &Body 
+        position: relative
+        display: flex 
+        align-items: center 
+        align-content: center 
+      &Skills 
+        padding-left: 0px
+        padding-right: 50px
+    &--triangle 
+      position: absolute
+      right: -30% 
+      top: -20%
+      z-index: 1
+      &Skills 
+        position: absolute
+        left: 70% 
+        top: 130%
+        z-index: 1
+      &--animation  
+      --translateX: -1.3125px
+      --translateY: -4.87755px
+      --rotateX: 24.3878deg
+      --rotateY: -6.5625deg
+      transform: translateX(var(--translateX))translateY(var(--translateY))rotateX(var(--rotateX))rotateY(var(--rotateY))
+      transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
+    &--Image 
+    &--about
+      margin: 0px 0px 16px 0px
+      padding: 0px 0px 0px 15px
+      border-style: solid
+      border-width: 0px 0px 0px 3px
+      border-color: #FFD43A
+      &Heading 
+        font-size: 16px
+        text-transform: uppercase
+        font-family: $family-sans-serif
+        &Slider 
+          color: #fff 
+    &--design
+      &Title 
+        color: #2D1863
+        font-family: "Abril Fatface", Sans-serif
+        font-size: 56px
+        font-weight: 400
+        line-height: 1.5em
+        padding-bottom: 20px
+        &Slider 
+          color: #fff 
+    &--lorem 
+      &Copy 
+        color: #8F91B0
+        font-family: $family-sans-serif
+        font-size: 16px
+        font-weight: 400
+        line-height: 2em
+    &--about 
+    &--design 
+    &--lorem
+      margin-bottom: 40px
+.video 
+  position: relative
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  padding: 130px 0px 130px 0px
+  &__frame
+    position: relative
+    display: flex 
+    justify-content: center
+    align-items: center
+    width: 890px
+    height: 557px
+    border-radius: 30px
+    margin-left: auto 
+    margin-right: auto
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2),inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004)
+    background-image: linear-gradient( 0deg, rgb(188,189,191) 0%, rgb(216,216,223) 10%, rgb(216,216,223) 89%, rgb(173,170,189) 100%)
+    margin: 30px
+    &--iframe 
+      width: 100% 
+      height: 100%
+      border-radius: 30px
+  &__content 
+    position: relative
+    width: 100% 
+    display: flex 
+    min-height: 1px 
+    box-sizing: border-box 
+  &__wrap 
+    position: relative 
+    display: flex 
+    align-items: center 
+    align-content: center 
+    &--container
+      padding: 50px 50px 50px 50px
+      background-color: #FFFFFF
+      border-radius: 50px 50px 50px 50px
+      transform: translateZ(0)
+      transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
+    &--triangle 
+      position: absolute
+      right: -20% 
+      top: -8% 
+      z-index: 1
+    &--triAnimation 
+      --translateX: -4.10417px
+      --translateY: 8.15242px
+      transform: translateX(var(--translateX))translateY(va(--translateY))
+      ransition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
+    &--Object 
+      position: absolute
+      left: -20% 
+      top: 35% 
+      z-index: 1
+      &Animation 
+        transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
+        --translateX: 6.125px
+        --translateY: -9.76905px
+        transform: translateX(var(--translateX))translateY(var(--translateY))
+    &--Doted
+      position: absolute
+      right: -6% 
+      bottom: 28% 
+      z-index: 1
+      &Animation
+        --translateX: 18.1771px
+        --translateY: -24.7691px
+        transform: translateX(var(--translateX))translateY(var(--translateY))
+        transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
+      &img 
+        width: 80%
+        height: auto 
+        border: none 
+        box-shadow: none 
+    &--triImage 
+    &--animationimg
+  &__wrapper 
+    &--embed 
+      cursor: pointer
+      text-align: center
+    &--play 
+      position: absolute 
+      top: 50% 
+      left: 50% 
+      transform: translate(-50%,-50%)
+      .play 
+        font-size: 100px
+        color: #ffffff
+.portfolio 
+  position: relative
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  padding: 130px 0px 130px 0px 
+  &__overlay 
+    background-image: url("/assets/object-5.png")
+    background-position: 50% 95%
+    background-repeat: no-repeat
+    opacity: 0.5
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    position: absolute
+  &__row
+    position: relative
+    display: flex 
+    flex-wrap: wrap
+    align-items: center 
+    align-content: center
+  &__col 
+    position: relative
+    &--wrap 
+      position: relative
+      &Header 
+        margin-top: 0px
+        margin-bottom: 0px
+        padding: 0px 0px 50px 0px
+        .header 
+          position: relative
+          padding: 0px 0px 0px 15px
+          border-style: solid
+          border-width: 0px 0px 0px 3px
+          border-color: #FFD43A
+          &__title 
+            color: #2D1863
+            font-family: $family-sans-serif
+            font-size: 16px
+            font-weight: 500
+            text-transform: uppercase
+            line-height: 1.5em
+        .Menu
+          position: relative
+          padding: 0px 0px 20px 0px
+          display: flex 
+          align-items: center 
+          justify-content: center
+          &__body  
+            flex: 1
+            &Title 
+              color: #2D1863
+              font-family: "Abril Fatface", Sans-serif
+              font-size: 56px
+              font-weight: 400
+              line-height: 1.5em   
+          &__content 
+            padding-top: 46px
+          &__list 
+          &__item 
+            display: inline-flex   
+            padding: 0px 0px 0px 0px
+            margin: 0px 0px 20px 10px
+            font-family: $family-sans-serif
+            font-size: 16px
+            font-weight: 500
+            text-transform: uppercase
+            line-height: 1.5em
+            color: #2D1863 
+            text-decoration: none 
+            cursor: pointer
+            &:hover 
+              color: #6F34FE
+      &Content 
+        position: relative
+        .card 
+          position: relative
+          &__portfolio
+            padding: 0
+            margin: 15px
+            border-radius: 20px
+            &--img 
+              border-top-left-radius: 20px
+              border-top-right-radius: 20px
+            &--body 
+              background-color: #FFFFFF
+              padding: 20px
+              border-radius: 20px
+            &--title 
+              font-family: $family-sans-serif
+              font-size: 16px
+              font-weight: 600
+              line-height: 1.5em
+              color: #2D1863
+.slider 
+  position: relative
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  padding: 130px 0px 130px 0px
+  &__wrap 
+    position: relative
+    display: flex 
+    flex-wrap: wrap 
+    align-items: center 
+    align-content: center 
+    &Section 
+      background-image: url("/assets/bg.png")
+      background-position: bottom right
+      background-repeat: no-repeat
+      background-size: cover
+      padding: 0px 0px 170px 0px
+      width: 100% 
+      height: 100% 
+      min-width: 1572px
+      min-height: 670px
+    &Overlay 
+      background-image: url("/assets/image-3.png")
+      background-position: bottom right
+      background-repeat: no-repeat
+      background-size: 44% auto
+      opacity: 1
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s
+      height: 100%
+      width: 100%
+      top: 0
+      left: 37%
+      position: absolute
+  &__content 
+    padding: 100px 0px 0px 100px
+    width: 100% 
+    margin-left: -115px
+    &Wrap 
+      position: relative
+  &__dotted 
+    position: absolute
+    right: 15% 
+    top: -30%
+  &__Triangle
+    position: absolute
+    right: -2%
+    bottom: 8% 
+    &img 
+      width: 80%
+  &__carousel
+    margin: -40px 110px 0px -110px
+    padding: 40px
+    background-color: #fff
+    border-radius: 20px
+    &Content 
+      padding: 30px 0px
+  &__card 
+    position: relative
+    display: flex 
+    flex-wrap: wrap 
+    &Header
+      position: relative 
+      display: flex 
+      padding: 10px 0 40px
+    &img 
+      flex: 1
+      width: 47px 
+      height: 47px 
+      border-radius: 50%
+      margin-right: 20px
+    &User 
+      color: #2D1863
+      font-family: "Poppins", Sans-serif
+      font-size: 18px
+      font-weight: 400
+      font-style: normal
+      line-height: 1.5em
+    &Company 
+      color: #8F91B0
+      font-family: "Poppins", Sans-serif
+      font-size: 14px
+      font-weight: 400
+      font-style: normal
+      line-height: 1.5em
+  &__body 
+    &Copy 
+      color: #8F91B0
+      font-family: "Poppins", Sans-serif
+      font-size: 16px
+      font-weight: 400
+      font-style: normal
+      line-height: 1.5em
+
+.carousel-indicators
+  margin-bottom: -50px
+.carousel-indicators li
+  height: 15px
+  width: 15px
+  border-radius: 100%
+  margin-left: 5px
+  margin-right: 5px
+  background-color: #D4C2FF
+  &:active 
+    background-color: #6F34FE
+.news 
+  position: relative
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  padding: 130px 0px 130px 0px
+  &__wrap 
+    position: relative
+    display: flex 
+    align-items: center 
+    align-content: center 
+  &__row 
+    position: relative
+    display: flex 
+    align-items: center 
+    align-content: center 
+  &__banner 
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+    margin-top: 0px
+    margin-bottom: 0px
+    padding: 50px 40px 25px
+    background-color: #fff
+    border-radius: 20px 20px 20px 20px
+    z-index: 11
+    &--Title 
+      font-size: 32px
+    &--Copy 
+      font-size: 14px
+  &__form 
+  &__buttonGroup
+    position: relative
+    display: flex
+    align-items: center 
+    align-content: center
+    margin-bottom: 20px 
+  &__buttonEmail 
+    display: flex 
+    flex: 1 1 auto 
+  &__buttonInput 
+    background: #EFF5FF
+    height: 60px
+    padding: 15px 15px 15px 15px
+    border-radius: 20px 20px 20px 20px
+    border-style: solid
+    border-width: 0px 0px 0px 0px
+    color: #8F91B0
+    font-family: "Poppins", Sans-serif
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.5em
+    width: 315px
+  &__buttonSubscribe 
+    height: 60px
+  &__buttonSubmit
+    padding: 18px
+    margin: 0px 0px 0px 15px
+    font-family: "Poppins", Sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.5em
+    color: #ffffff
+    background-color: #6F34FE
+    border-radius: 20px
+    display: flex 
+    align-items: center 
+    justify-content: center
+    &:hover  
+      color: #ffffff
+      background-color: #2D1863
+  &__object 
+    position: absolute
+    right: -7% 
+    top: -65% 
+    z-index: 0
+.footer 
+  position: relative
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  padding: 130px 0px 130px 0px
+  &__row 
+    position: relative
+    display: flex 
+    align-items: center 
+    align-content: center 
+  &__copywrite
+    padding: 10px
+    color: #8F91B0
+    font-family: "Poppins", Sans-serif
+    font-size: 14px
+    font-weight: 400
+    line-height: 2em
+  &__socialIcon
+    position: relative
+    display: flex 
+    align-items: center 
+    align-content: center 
+    justify-content: center
+    align-self: center
+    justify-content: flex-end
+  &__socialList 
+    list-style: none 
+  &__socialItem 
+    display: inline-flex 
+  &__socialLink  
+    border-radius: 50%
+    width: 42px 
+    height: 42px
+    display: flex 
+    justify-content: center 
+    align-items: center
+    font-size: 21px
+    color: #ffffff
+    background-color: #3b5998
+    text-decoration: none 
+    &:not(:last-child)
+      margin-right: 10px
+    &:hover 
+      color: #fff
+      text-decoration: none 
+    &--twitter 
+      background-color: #1da1f2
+    &--linkedin 
+      background-color: #0077b5
+    &--instagram 
+      background-color: #CA3174
+  &__dotted
+    position: absolute 
+    right: 43% 
+    top: -50%
+    z-index: 13
+    &img 
+      width: 80%
+  &__triangle 
+    position: absolute 
+    left: 10% 
+    top: -200%
+.testimonials
+  position: relative
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
+  padding: 130px 0px 130px 0px
+  &__row
+  &__col 
+   position: relative
+   width: 100%
+  &__wrap,
+  &__wrapper 
+    width: auto
+  &__section 
+    background-image: url("/assets/bg.png")
+    background-position: bottom right
+    background-repeat: no-repeat
+    background-size: 85% auto
+    margin-top: 0px
+    margin-bottom: 0px
+    padding: 0px 0px 370px 0px
+    width: 100%
+// Responsive 
+@media screen and (min-width: 320px) and (max-width: 600px)
+  .header 
+    border: 1px solid red 
+

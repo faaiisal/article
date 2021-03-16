@@ -1,6 +1,11 @@
-# Article
+# EleFolio Project 
 
-A simple article as seen on [Medium](https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-how-to-build-a-simple-chrome-extension-in-vanilla-javascript-e52b2994aeeb).
-
+How to star. 
+Step One 
+git clone 
+Step Two
+got to project directory and run npm install --pure-lockfile
+Step Three 
+when install complete run gulp command 
 ### Demo
 https://faaiisal.github.io/article

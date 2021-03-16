@@ -148,7 +148,7 @@ a:focus {
   background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%);
   padding: 130px 0px 130px 0px; }
   .about__content {
-    background-image: url("/assets/object-5.png");
+    background-image: url("../assets/object-5.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 50% auto;
@@ -387,7 +387,7 @@ a:focus {
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   padding: 130px 0px 130px 0px; }
   .portfolio__overlay {
-    background-image: url("/assets/object-5.png");
+    background-image: url("../assets/object-5.png");
     background-position: 50% 95%;
     background-repeat: no-repeat;
     opacity: 0.5;
@@ -489,7 +489,7 @@ a:focus {
     align-items: center;
     align-content: center; }
     .slider__wrapSection {
-      background-image: url("/assets/bg.png");
+      background-image: url("../assets/bg.png");
       background-position: bottom right;
       background-repeat: no-repeat;
       background-size: cover;
@@ -499,7 +499,7 @@ a:focus {
       min-width: 1572px;
       min-height: 670px; }
     .slider__wrapOverlay {
-      background-image: url("/assets/image-3.png");
+      background-image: url("../assets/image-3.png");
       background-position: bottom right;
       background-repeat: no-repeat;
       background-size: 44% auto;
@@ -732,7 +732,7 @@ a:focus {
   .testimonials__wrap, .testimonials__wrapper {
     width: auto; }
   .testimonials__section {
-    background-image: url("/assets/bg.png");
+    background-image: url("../assets/bg.png");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 85% auto;

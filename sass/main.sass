@@ -5,12 +5,49 @@ $family-sans-serif: 'Poppins', sans-serif;
 
 // $responsive:
 //Reset
-html, body, div,
-h1, p,a
-  margin: 0
-  padding: 0
-  border: 0
-  font-size: 100%
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+body 
+	line-height: 1
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+	content: ''
+	content: none
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+
   //body
 body
   margin: 0
@@ -28,6 +65,7 @@ body
   &::before,
   &::after
     box-sizing: border-box
+    clear: both
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -62,6 +100,9 @@ a:focus
     clear: both 
 .banner 
   position: relative
+  background-color: transparent
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
+  padding-bottom: 150px
   &__container
     padding-bottom: 150px
   &__row 
@@ -75,7 +116,7 @@ a:focus
     padding-top: 140px
     width: 100%
     &--content 
-      margin: 0px 0px 16px 0px
+      margin-bottom: 20px
       padding: 0px 0px 0px 15px
       border-style: solid
       border-width: 0px 0px 0px 3px
@@ -84,13 +125,15 @@ a:focus
       font-size: 16px
       text-transform: uppercase
       font-family: $family-sans-serif
+    &--heading, 
+    &--label
+      padding-bottom: 20px
     &--title 
-    color: #2D1863
-    font-family: "Abril Fatface", Sans-serif
-    font-size: 72px
-    font-weight: 400
-    line-height: 1.5em
-    padding-bottom: 20px
+      color: #2D1863
+      font-family: "Abril Fatface", Sans-serif
+      font-size: 72px
+      font-weight: 400
+      line-height: 1.5em
     &--copy 
       color: #8F91B0
       font-family: $family-sans-serif
@@ -99,20 +142,22 @@ a:focus
       line-height: 1.5em
   &__hero
     margin: -51px -100px 0px 0px
-    min-width: 510px
-    min-height: 668px
+    max-width: 510px
+    max-height: 668px
     &--img 
-      width: 100% 
+      width: 100%
   &__object 
     position: absolute 
-    right: -36%
-    top: -4%
+    right: -29%
+    top: -2%
     &--img 
-      max-width: 80%
+      width: 80%
   &__circle 
     position: absolute
-    left: -25%
-    bottom: 37%
+    left: -20%
+    bottom: 15%
+    &--img 
+      width: 80%
   &__buttonGroup
     position: relative
     &--contact 
@@ -148,6 +193,8 @@ a:focus
     position: absolute
     left: 33%
     bottom: -45%
+    &--img 
+      width: 80%
 .about
   position: relative
   background-color: transparent
@@ -181,13 +228,15 @@ a:focus
         border-radius: 50px 50px 50px 0px
       &Testing
         margin: 0px 25px 50px 0px
-        border-radius: 50px 0px 50px 50px
+        border-radius: 50px
+        min-width: 280px
+        min-height: 280px
       &Prototyping 
         margin: 0px 0px 0px 25px
         border-radius: 0px 50px 50px 50px
       &Skills
         padding: 40px 30px 40px 30px
-        border-radius: 20px 20px 20px 20px
+        border-radius: 20px
         z-index: 11
     &--Doted 
       position: absolute
@@ -202,9 +251,18 @@ a:focus
     &--container 
     &--card 
       position: relative
+      &Testing
+        padding-top: 45px
       &Icon 
-        text-align: center 
-        height: auto 
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+        align-content: center
+        &Content 
+          position: relative 
+          flex-wrap: wrap
         &Img 
           width: 100px 
         &Title 
@@ -235,6 +293,7 @@ a:focus
         font-weight: 500
         line-height: 1.5em
         margin: 20px 0px 0px 0px
+        text-align: center
     
   &__concept 
     position: relative
@@ -273,7 +332,7 @@ a:focus
       transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s
     &--Image 
     &--about
-      margin: 0px 0px 16px 0px
+      margin-bottom: 20px
       padding: 0px 0px 0px 15px
       border-style: solid
       border-width: 0px 0px 0px 3px
@@ -285,6 +344,7 @@ a:focus
         &Slider 
           color: #fff 
     &--design
+      margin-bottom: 20px
       &Title 
         color: #2D1863
         font-family: "Abril Fatface", Sans-serif
@@ -295,6 +355,7 @@ a:focus
         &Slider 
           color: #fff 
     &--lorem 
+      margin-bottom: 20px
       &Copy 
         color: #8F91B0
         font-family: $family-sans-serif
@@ -304,7 +365,8 @@ a:focus
     &--about 
     &--design 
     &--lorem
-      margin-bottom: 40px
+      &:not(:last-child)
+        margin-bottom: 40px
 .video 
   position: relative
   background-color: transparent;
@@ -351,6 +413,8 @@ a:focus
       right: -20% 
       top: -8% 
       z-index: 1
+      &img 
+        width: 80%
     &--triAnimation 
       --translateX: -4.10417px
       --translateY: 8.15242px
@@ -446,7 +510,7 @@ a:focus
           align-items: center 
           justify-content: center
           &__body  
-            flex: 1
+            flex: 1 auto
             &Title 
               color: #2D1863
               font-family: "Abril Fatface", Sans-serif
@@ -458,8 +522,6 @@ a:focus
           &__list 
           &__item 
             display: inline-flex   
-            padding: 0px 0px 0px 0px
-            margin: 0px 0px 20px 10px
             font-family: $family-sans-serif
             font-size: 16px
             font-weight: 500
@@ -468,8 +530,9 @@ a:focus
             color: #2D1863 
             text-decoration: none 
             cursor: pointer
-            &:hover 
-              color: #6F34FE
+            padding: 0
+            margin: 0px 0px 20px 10px
+              
       &Content 
         position: relative
         .card 
@@ -535,6 +598,8 @@ a:focus
     position: absolute
     right: 15% 
     top: -30%
+    &img 
+      width: 80%
   &__Triangle
     position: absolute
     right: -2%
@@ -670,6 +735,8 @@ a:focus
     right: -7% 
     top: -65% 
     z-index: 0
+    &img 
+      width: 80%
 .footer 
   position: relative
   background-color: transparent;
@@ -733,32 +800,201 @@ a:focus
     position: absolute 
     left: 10% 
     top: -200%
-.testimonials
-  position: relative
-  background-color: transparent;
-  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%)
-  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s
-  padding: 130px 0px 130px 0px
-  &__row
-  &__col 
-   position: relative
-   width: 100%
-  &__wrap,
-  &__wrapper 
-    width: auto
-  &__section 
+
+// Responsive 
+@media only screen and (max-width: 600px) and (min-width: 320px)
+  .header 
+    position: relative
+  .banner 
+    padding-bottom: 70px
+    &__wrap 
+      padding-top: 60px
+      &--title 
+        font-size: 32px
+        max-width: 280px
+    &__buttonGroup 
+      padding-bottom: 100px
+      &--contact,
+      &--download 
+        font-size: 16px 
+        margin-bottom: 20px
+    &__doted 
+      left: 165px
+      bottom: 100px
+    &__ContentHero
+      margin-top: -30px
+    &__hero 
+      margin: 0
+      min-width: 280px
+      width: 100%
+      min-height: 365px
+      height: 100%
+    &__object 
+      right: 20px 
+      top: -13%
+      &--img 
+        width: 40%
+    &__circle 
+      left: 60px
+      bottom: 50px
+  .about 
+    padding: 70px 0px
+    &__content
+      &--wrap 
+      &--item 
+        position: relative
+        width: 100% 
+        display: flex 
+        align-items: center
+        justify-content: center
+        margin: 0 0 30px
+      &--Doted
+        left: 30px 
+        top: 250px
+    &__concept 
+      padding-top: 70px
+      &skils
+        padding-top: 0
+      &--wrap 
+        padding-left: 0px
+        &Skills
+          padding-right: 0px
+      &--triangle 
+        right: 30px
+        top: 0%
+        &Skills 
+          left: 120px
+          top: -75px
+      &--designTitle 
+        font-size: 32px
+      &--loremSkills
+        margin-bottom: 40px !important
+      &--about 
+      &--design 
+      &--lorem
+        &:not(:last-child)
+          margin-bottom: 0px
+
+  .video 
+    padding: 70px 0
+    &__wrap 
+      &--content 
+      &--container 
+        padding: 20px
+        border-radius: 20px
+      &--triangle 
+        right: 30px
+        top: -55%
+      &--Object, 
+      &--Doted
+        display: none
+
+  .portfolio 
+    position: relative
+    padding: 70px 0 
+    &__overlay 
+    &__row
+    &__col 
+      &--wrap 
+        &Header 
+          .header 
+          .Menu
+            position: relative
+            display: inline-block
+            &__body  
+              &Title 
+                font-size: 32px
+            &__list
+              position: relative 
+              display: flex 
+              flex-wrap: wrap 
+              align-items: center
+              align-content: center
+              justify-content: center
+            &__item
+              margin-right: 25px
+  .slider 
     background-image: url("../assets/bg.png")
     background-position: bottom right
     background-repeat: no-repeat
-    background-size: 85% auto
-    margin-top: 0px
-    margin-bottom: 0px
-    padding: 0px 0px 370px 0px
-    width: 100%
-// Responsive 
-// @media screen and (min-width: 320px) and (max-width: 600px)
-//   .header 
-//     border: 1px solid red 
-//   .banner 
+    background-size: cover
+    position: relative
+    padding: 70px 0
+    overflow: hidden
+    &__wrap 
+      &Section 
+        min-width: 0 
+        min-height: 0
+      &Overlay 
+        top: 75px
+        left: 15px
+    &__Rows
+      margin-left: -15px 
+      margin-right: -15px 
+    &__content 
+      width: auto 
+      transform: translateY(-220%)
+      &Wrap 
+    &__dotted 
+      display: none 
+    &__Triangle
+      right: 0px
+      top: 110px
+      &img 
+        width: 80%
+    &__carousel
+      margin: 0 
+      padding: 20px
+      transform: translateY(40%)
+
+  .carousel-indicators
+  .carousel-indicators li
+  .news 
+    position: relative
+    padding: 130px 0
+    &__wrap 
+      display: block
+    &__row 
+    &__banner
+      padding: 30px 5px
+      &--Title 
+        font-size: 32px !important
+      &--Copy 
+    &__form 
+    &__buttonGroup
+      display: block
+    &__buttonEmail 
+    &__buttonInput 
+    &__buttonSubscribe 
+      width: 100%
+    &__buttonSubmit
+      width: 100%
+      margin-top: 30px
+      margin-left: 0
+    &__object 
+      right: -20%
+      top: 115px
+      z-index: 15
+      &img 
+        width: 40%
+  .footer 
+    position: relative
+    padding: 70px 0
+    &__logo,
+    &__copywrite
+      text-align: center
+    &__socialIcon
+      display: block 
+      text-align: center
+    &__logo,
+    &__copywrite,
+    &__socialIcon
+      padding-bottom: 20px
+    &__dotted
+      right: 33% 
+      top: -40%
+    &__triangle 
+      left: 10% 
+      top: -190%
 
 

@@ -5,12 +5,48 @@
 * @link @Link url
 * @license MIT
 */
-html, body, div,
-h1, p, a {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%; }
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 body {
   margin: 0;
@@ -24,7 +60,8 @@ body {
   background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%); }
 
 *, *::before, *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  clear: both; }
 
 /**
  * Remove the gray background on active links in IE 10.
@@ -56,7 +93,10 @@ a:focus {
     clear: both; }
 
 .banner {
-  position: relative; }
+  position: relative;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%);
+  padding-bottom: 150px; }
   .banner__container {
     padding-bottom: 150px; }
   .banner__content {
@@ -67,15 +107,9 @@ a:focus {
     align-content: center;
     justify-content: center;
     padding-top: 140px;
-    width: 100%;
-    color: #2D1863;
-    font-family: "Abril Fatface", Sans-serif;
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 1.5em;
-    padding-bottom: 20px; }
+    width: 100%; }
     .banner__wrap--content {
-      margin: 0px 0px 16px 0px;
+      margin-bottom: 20px;
       padding: 0px 0px 0px 15px;
       border-style: solid;
       border-width: 0px 0px 0px 3px;
@@ -84,6 +118,14 @@ a:focus {
       font-size: 16px;
       text-transform: uppercase;
       font-family: "Poppins", sans-serif; }
+    .banner__wrap--heading, .banner__wrap--label {
+      padding-bottom: 20px; }
+    .banner__wrap--title {
+      color: #2D1863;
+      font-family: "Abril Fatface", Sans-serif;
+      font-size: 72px;
+      font-weight: 400;
+      line-height: 1.5em; }
     .banner__wrap--copy {
       color: #8F91B0;
       font-family: "Poppins", sans-serif;
@@ -92,20 +134,22 @@ a:focus {
       line-height: 1.5em; }
   .banner__hero {
     margin: -51px -100px 0px 0px;
-    min-width: 510px;
-    min-height: 668px; }
+    max-width: 510px;
+    max-height: 668px; }
     .banner__hero--img {
       width: 100%; }
   .banner__object {
     position: absolute;
-    right: -36%;
-    top: -4%; }
+    right: -29%;
+    top: -2%; }
     .banner__object--img {
-      max-width: 80%; }
+      width: 80%; }
   .banner__circle {
     position: absolute;
-    left: -25%;
-    bottom: 37%; }
+    left: -20%;
+    bottom: 15%; }
+    .banner__circle--img {
+      width: 80%; }
   .banner__buttonGroup {
     position: relative; }
     .banner__buttonGroup--contact {
@@ -141,6 +185,8 @@ a:focus {
     position: absolute;
     left: 33%;
     bottom: -45%; }
+    .banner__doted--img {
+      width: 80%; }
 
 .about {
   position: relative;
@@ -148,7 +194,7 @@ a:focus {
   background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%);
   padding: 130px 0px 130px 0px; }
   .about__content {
-    background-image: url("/assets/object-5.png");
+    background-image: url("../assets/object-5.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 50% auto;
@@ -175,13 +221,15 @@ a:focus {
         border-radius: 50px 50px 50px 0px; }
       .about__content--itemTesting {
         margin: 0px 25px 50px 0px;
-        border-radius: 50px 0px 50px 50px; }
+        border-radius: 50px;
+        min-width: 280px;
+        min-height: 280px; }
       .about__content--itemPrototyping {
         margin: 0px 0px 0px 25px;
         border-radius: 0px 50px 50px 50px; }
       .about__content--itemSkills {
         padding: 40px 30px 40px 30px;
-        border-radius: 20px 20px 20px 20px;
+        border-radius: 20px;
         z-index: 11; }
     .about__content--Doted {
       position: absolute;
@@ -195,9 +243,18 @@ a:focus {
         transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s; }
     .about__content--card {
       position: relative; }
+      .about__content--cardTesting {
+        padding-top: 45px; }
       .about__content--cardIcon {
-        text-align: center;
-        height: auto; }
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center; }
+        .about__content--cardIconContent {
+          position: relative;
+          flex-wrap: wrap; }
         .about__content--cardIconImg {
           width: 100px; }
         .about__content--cardIconTitle {
@@ -227,7 +284,8 @@ a:focus {
         font-size: 20px;
         font-weight: 500;
         line-height: 1.5em;
-        margin: 20px 0px 0px 0px; }
+        margin: 20px 0px 0px 0px;
+        text-align: center; }
   .about__concept {
     position: relative;
     display: flex;
@@ -263,7 +321,7 @@ a:focus {
         top: 130%;
         z-index: 1; }
     .about__concept--about {
-      margin: 0px 0px 16px 0px;
+      margin-bottom: 20px;
       padding: 0px 0px 0px 15px;
       border-style: solid;
       border-width: 0px 0px 0px 3px;
@@ -274,22 +332,26 @@ a:focus {
         font-family: "Poppins", sans-serif; }
         .about__concept--aboutHeadingSlider {
           color: #fff; }
-    .about__concept--designTitle {
-      color: #2D1863;
-      font-family: "Abril Fatface", Sans-serif;
-      font-size: 56px;
-      font-weight: 400;
-      line-height: 1.5em;
-      padding-bottom: 20px; }
-      .about__concept--designTitleSlider {
-        color: #fff; }
-    .about__concept--loremCopy {
-      color: #8F91B0;
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 2em; }
+    .about__concept--design {
+      margin-bottom: 20px; }
+      .about__concept--designTitle {
+        color: #2D1863;
+        font-family: "Abril Fatface", Sans-serif;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 1.5em;
+        padding-bottom: 20px; }
+        .about__concept--designTitleSlider {
+          color: #fff; }
     .about__concept--lorem {
+      margin-bottom: 20px; }
+      .about__concept--loremCopy {
+        color: #8F91B0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 2em; }
+    .about__concept--lorem:not(:last-child) {
       margin-bottom: 40px; }
 
 .video {
@@ -338,6 +400,8 @@ a:focus {
       right: -20%;
       top: -8%;
       z-index: 1; }
+      .video__wrap--triangleimg {
+        width: 80%; }
     .video__wrap--triAnimation {
       --translateX: -4.10417px;
       --translateY: 8.15242px;
@@ -387,7 +451,7 @@ a:focus {
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   padding: 130px 0px 130px 0px; }
   .portfolio__overlay {
-    background-image: url("/assets/object-5.png");
+    background-image: url("../assets/object-5.png");
     background-position: 50% 95%;
     background-repeat: no-repeat;
     opacity: 0.5;
@@ -431,7 +495,7 @@ a:focus {
           align-items: center;
           justify-content: center; }
           .portfolio__col--wrapHeader .Menu__body {
-            flex: 1; }
+            flex: 1 auto; }
             .portfolio__col--wrapHeader .Menu__bodyTitle {
               color: #2D1863;
               font-family: "Abril Fatface", Sans-serif;
@@ -442,8 +506,6 @@ a:focus {
             padding-top: 46px; }
           .portfolio__col--wrapHeader .Menu__item {
             display: inline-flex;
-            padding: 0px 0px 0px 0px;
-            margin: 0px 0px 20px 10px;
             font-family: "Poppins", sans-serif;
             font-size: 16px;
             font-weight: 500;
@@ -451,9 +513,9 @@ a:focus {
             line-height: 1.5em;
             color: #2D1863;
             text-decoration: none;
-            cursor: pointer; }
-            .portfolio__col--wrapHeader .Menu__item:hover {
-              color: #6F34FE; }
+            cursor: pointer;
+            padding: 0;
+            margin: 0px 0px 20px 10px; }
       .portfolio__col--wrapContent {
         position: relative; }
         .portfolio__col--wrapContent .card {
@@ -489,7 +551,7 @@ a:focus {
     align-items: center;
     align-content: center; }
     .slider__wrapSection {
-      background-image: url("/assets/bg.png");
+      background-image: url("../assets/bg.png");
       background-position: bottom right;
       background-repeat: no-repeat;
       background-size: cover;
@@ -499,7 +561,7 @@ a:focus {
       min-width: 1572px;
       min-height: 670px; }
     .slider__wrapOverlay {
-      background-image: url("/assets/image-3.png");
+      background-image: url("../assets/image-3.png");
       background-position: bottom right;
       background-repeat: no-repeat;
       background-size: 44% auto;
@@ -520,6 +582,8 @@ a:focus {
     position: absolute;
     right: 15%;
     top: -30%; }
+    .slider__dottedimg {
+      width: 80%; }
   .slider__Triangle {
     position: absolute;
     right: -2%;
@@ -655,6 +719,8 @@ a:focus {
     right: -7%;
     top: -65%;
     z-index: 0; }
+    .news__objectimg {
+      width: 80%; }
 
 .footer {
   position: relative;
@@ -720,27 +786,166 @@ a:focus {
     left: 10%;
     top: -200%; }
 
-.testimonials {
-  position: relative;
-  background-color: transparent;
-  background-image: linear-gradient(90deg, #F2F2FF 0%, #EBFAFF 100%);
-  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-  padding: 130px 0px 130px 0px; }
-  .testimonials__col {
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .header {
+    position: relative; }
+  .banner {
+    padding-bottom: 70px; }
+    .banner__wrap {
+      padding-top: 60px; }
+      .banner__wrap--title {
+        font-size: 32px;
+        max-width: 280px; }
+    .banner__buttonGroup {
+      padding-bottom: 100px; }
+      .banner__buttonGroup--contact, .banner__buttonGroup--download {
+        font-size: 16px;
+        margin-bottom: 20px; }
+    .banner__doted {
+      left: 165px;
+      bottom: 100px; }
+    .banner__ContentHero {
+      margin-top: -30px; }
+    .banner__hero {
+      margin: 0;
+      min-width: 280px;
+      width: 100%;
+      min-height: 365px;
+      height: 100%; }
+    .banner__object {
+      right: 20px;
+      top: -13%; }
+      .banner__object--img {
+        width: 40%; }
+    .banner__circle {
+      left: 60px;
+      bottom: 50px; }
+  .about {
+    padding: 70px 0px; }
+    .about__content--item {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 30px; }
+    .about__content--Doted {
+      left: 30px;
+      top: 250px; }
+    .about__concept {
+      padding-top: 70px; }
+      .about__conceptskils {
+        padding-top: 0; }
+      .about__concept--wrap {
+        padding-left: 0px; }
+        .about__concept--wrapSkills {
+          padding-right: 0px; }
+      .about__concept--triangle {
+        right: 30px;
+        top: 0%; }
+        .about__concept--triangleSkills {
+          left: 120px;
+          top: -75px; }
+      .about__concept--designTitle {
+        font-size: 32px; }
+      .about__concept--loremSkills {
+        margin-bottom: 40px !important; }
+      .about__concept--lorem:not(:last-child) {
+        margin-bottom: 0px; }
+  .video {
+    padding: 70px 0; }
+    .video__wrap--container {
+      padding: 20px;
+      border-radius: 20px; }
+    .video__wrap--triangle {
+      right: 30px;
+      top: -55%; }
+    .video__wrap--Object, .video__wrap--Doted {
+      display: none; }
+  .portfolio {
     position: relative;
-    width: 100%; }
-  .testimonials__wrap, .testimonials__wrapper {
-    width: auto; }
-  .testimonials__section {
-    background-image: url("/assets/bg.png");
+    padding: 70px 0; }
+    .portfolio__col--wrapHeader .Menu {
+      position: relative;
+      display: inline-block; }
+      .portfolio__col--wrapHeader .Menu__bodyTitle {
+        font-size: 32px; }
+      .portfolio__col--wrapHeader .Menu__list {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center; }
+      .portfolio__col--wrapHeader .Menu__item {
+        margin-right: 25px; }
+  .slider {
+    background-image: url("../assets/bg.png");
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: 85% auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px 0px 370px 0px;
-    width: 100%; }
-
-@media screen and (min-width: 320px) and (max-width: 600px) {
-  .header {
-    border: 1px solid red; } }
+    background-size: cover;
+    position: relative;
+    padding: 70px 0;
+    overflow: hidden; }
+    .slider__wrapSection {
+      min-width: 0;
+      min-height: 0; }
+    .slider__wrapOverlay {
+      top: 75px;
+      left: 15px; }
+    .slider__Rows {
+      margin-left: -15px;
+      margin-right: -15px; }
+    .slider__content {
+      width: auto;
+      transform: translateY(-220%); }
+    .slider__dotted {
+      display: none; }
+    .slider__Triangle {
+      right: 0px;
+      top: 110px; }
+      .slider__Triangleimg {
+        width: 80%; }
+    .slider__carousel {
+      margin: 0;
+      padding: 20px;
+      transform: translateY(40%); }
+  .news {
+    position: relative;
+    padding: 130px 0; }
+    .news__wrap {
+      display: block; }
+    .news__banner {
+      padding: 30px 5px; }
+      .news__banner--Title {
+        font-size: 32px !important; }
+    .news__buttonGroup {
+      display: block; }
+    .news__buttonSubscribe {
+      width: 100%; }
+    .news__buttonSubmit {
+      width: 100%;
+      margin-top: 30px;
+      margin-left: 0; }
+    .news__object {
+      right: -20%;
+      top: 115px;
+      z-index: 15; }
+      .news__objectimg {
+        width: 40%; }
+  .footer {
+    position: relative;
+    padding: 70px 0; }
+    .footer__logo, .footer__copywrite {
+      text-align: center; }
+    .footer__socialIcon {
+      display: block;
+      text-align: center; }
+    .footer__logo, .footer__copywrite, .footer__socialIcon {
+      padding-bottom: 20px; }
+    .footer__dotted {
+      right: 33%;
+      top: -40%; }
+    .footer__triangle {
+      left: 10%;
+      top: -190%; } }

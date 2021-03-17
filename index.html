@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>EleFolio</title>
   </head>
   <body>
@@ -20,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-light header__navbar">
           <a class="navbar-brand header__brand" href="#">
             <img src="assets/logo.png" alt="" class="header__logo">
-          </a>        
+          </a>
           <button class="navbar-toggler header__toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon header__icon"></span>
           </button>
@@ -53,31 +54,33 @@
                 <div class="banner__wrap--content">
                   <h4 class="banner__wrap--text">Product Designer</h4>
                 </div>
-                <div class="">
-                  <h2 class="banner__wrap--title display-4">Markus Räikkönen</h2>
+                <div class="banner__wrap--heading">
+                  <h2 class="banner__wrap--title">Markus Räikkönen</h2>
                 </div>
-                <div class="">
+                <div class="banner__wrap--label">
                   <h4 class="banner__wrap--copy">I am a freelance product designer. Let’s work together.</h4>
                 </div>
                 <div class="banner__buttonGroup">
                   <button class="btn banner__buttonGroup--contact">Contact Me</button>
                   <button class="btn banner__buttonGroup--download">Download CV</button>
                 </div>
-                <div class="banner__doted">
-                  <img src="assets/object-3.png" alt="" class="banner__doted--img">
+                <div class="banner__doted img-fluid">
+                  <img src="assets/object-3.png" alt="" class="img-fluid banner__doted--img">
                 </div>
               </div>
             </div>
           </div>
           <div class="col col-sm-7 col-md-5">
-            <div class="banner__hero">
-              <img src="assets/images.png" alt="hero" class="banner__hero banner__hero--img">
-            </div>
-            <div class="banner__object">
-              <img src="assets/object-2.png" alt="object" class="banner__boject banner__object--img">
-            </div>
-            <div class="banner__circle">
-              <img src="assets/object.png" alt="" class="banner__circle--img">
+            <div class="banner__ContentHero">
+                <div class="banner__hero img-fluid">
+                  <img src="assets/images.png" alt="hero" class="img-fluid banner__hero banner__hero--img">
+                </div>
+                <div class="banner__object img-fluid">
+                  <img src="assets/object-2.png" alt="object" class="img-fluid banner__boject banner__object--img">
+                </div>
+                <div class="banner__circle img-fluid">
+                  <img src="assets/object.png" alt="" class="img-fluid banner__circle--img">
+                </div>
             </div>
           </div>
         </div>
@@ -109,19 +112,19 @@
                         <img src="assets/icon-2.svg" alt="" class="about__content--cardIconImg">
                       </div>
                       <div class="about__content--cardContent">
-                        <h4 class="about__content--cardTitle">User Research</h4>
+                        <h4 class="about__content--cardTitle">Visual Design</h4>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="about__content--item about__content--itemTesting">
                   <div class="about__content--container">
-                    <div class="about__content--card">
+                    <div class="about__content--card about__content--cardTesting">
                       <div class="about__content--cardIcon">
                         <img src="assets/icon-3.svg" alt="" class="about__content--cardIconImg">
                       </div>
                       <div class="about__content--cardContent">
-                        <h4 class="about__content--cardTitle">User Research</h4>
+                        <h4 class="about__content--cardTitle">User Testing</h4>
                       </div>
                     </div>
                   </div>
@@ -133,7 +136,7 @@
                         <img src="assets/icon-4.svg" alt="" class="about__content--cardIconImg">
                       </div>
                       <div class="about__content--cardContent">
-                        <h4 class="about__content--cardTitle">User Research</h4>
+                        <h4 class="about__content--cardTitle">Prototyping</h4>
                       </div>
                     </div>
                   </div>
@@ -141,7 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="col col-sm-6  col-md-6">
+          <div class="col col-sm-6 col-md-6">
             <div class="about__concept">
               <div class="about__concept--wrap">
                 <div class="about__concept--wrpaBody">
@@ -183,38 +186,42 @@
     <div class="video">
       <div class="container">
         <div class="row">
-          <div class="video__content">
-            <div class="video__wrap">
-              <div class="video__wrap--content">
-                <div class="video__wrap--container">
-                  <div class="row video__wrapper">
-                    <div class="video__wrapper--embed" data-href="https://www.youtube.com/embed/coLxfjnrm3I">
-                      <img src="assets/image-2.jpg" alt="" class="video__wrapper--img">
-                      <div class="video__wrapper--play">
-                        <i class="far fa-play-circle play"></i>
+          <div class="col">
+            <div class="video__content">
+              <div class="video__wrap">
+                <div class="video__wrap--content">
+                  <div class="video__wrap--container">
+                    <div class="row video__wrapper">
+                      <div class="col col-md-12 col-xs-12 col-sm-12">
+                        <div class="video__wrapper--embed img-fluid" data-href="https://www.youtube.com/embed/coLxfjnrm3I">
+                          <img src="assets/image-2.jpg" alt="" class="video__wrapper--img img-fluid">
+                          <div class="video__wrapper--play">
+                            <i class="far fa-play-circle play"></i>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="video__wrap--triangle">
-                <div class="video__wrap--triAnimation">
-                  <div class="video__wrap--triImage">
-                    <img src="assets/object.png" alt="" class="video__wrap--animaitonimg">
+                <div class="video__wrap--triangle">
+                  <div class="video__wrap--triangleAnimation">
+                    <div class="video__wrap--triangleImage img-fluid">
+                      <img src="assets/object.png" alt="" class="video__wrap--triangleimg img-fluid">
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="video__wrap--Object">
-                <div class="video__wrap--ObjectAnimation">
-                  <div class="video__wrap--ObjectImage">
-                    <img src="assets/object-2.png" alt="" class="video__wrap--Objectimg">
+                <div class="video__wrap--Object">
+                  <div class="video__wrap--ObjectAnimation">
+                    <div class="video__wrap--ObjectImage img-fluid">
+                      <img src="assets/object-2.png" alt="" class="video__wrap--Objectimg img-fluid">
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="video__wrap--Doted">
-                <div class="video__wrap--DotedAnimation">
-                  <div class="video__wrap--DotedImage">
-                    <img src="assets/object-3.png" alt="" class="video__wrap--Dotedimg">
+                <div class="video__wrap--Doted">
+                  <div class="video__wrap--DotedAnimation">
+                    <div class="video__wrap--DotedImage img-fluid">
+                      <img src="assets/object-3.png" alt="" class="video__wrap--Dotedimg img-fluid">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -226,8 +233,8 @@
     <div class="about skils">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <div class="about__concept">
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="about__concept about__conceptskils">
               <div class="about__concept--wrap about__concept--wrapSkills">
                 <div class="about__concept--wrpaBody">
                   <div class="about__concept--triangle about__concept--triangleSkills">
@@ -246,28 +253,28 @@
                     Things I can do for my clients
                   </h2>
                 </div>
-                <div class="about__concept--lorem">
+                <div class="about__concept--lorem about__concept--loremSkills">
                   <div class="about__concept--loremCopy">
                     From offering in-depth user research, to helping with design
                     and testing, I can help bring your product to life.
                   </div>
                 </div>
-                <div class="banner__buttonGroup py-5">
+                <div class="banner__buttonGroup">
                   <button class="btn banner__buttonGroup--contact">Hire Me</button>
                   <button class="btn banner__buttonGroup--download">Download CV</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="about__content">
               <div class="about__content--wrap">
                 <div class="about__content--item about__content--itemSkills">
                   <div class="about__content--container">
                     <div class="about__content--card">
-                      <div class="about__content--cardIcon about__content--cardIconContent">
+                      <div class="about__content--cardIconContent">
                         <h4 class="about__content--cardIconTitle">
-                          Brand Identity 
+                          Brand Identity
                         </h4>
                         <p class="about__content--cardIconCopy">
                           Lorem Ipsum has been the industry's
@@ -284,9 +291,9 @@
                 <div class="about__content--item about__content--itemSkills">
                   <div class="about__content--container">
                     <div class="about__content--card">
-                      <div class="about__content--cardIcon about__content--cardIconContent">
+                      <div class="about__content--cardIconContent">
                         <h4 class="about__content--cardIconTitle">
-                          Product Design  
+                          Product Design
                         </h4>
                         <p class="about__content--cardIconCopy">
                           Lorem Ipsum has been the industry's
@@ -303,7 +310,7 @@
                 <div class="about__content--item about__content--itemSkills">
                   <div class="about__content--container">
                     <div class="about__content--card">
-                      <div class="about__content--cardIcon about__content--cardIconContent">
+                      <div class="about__content--cardIconContent">
                         <h4 class="about__content--cardIconTitle">
                           Interaction Design
                         </h4>
@@ -322,9 +329,9 @@
                 <div class="about__content--item about__content--itemSkills">
                   <div class="about__content--container">
                     <div class="about__content--card">
-                      <div class="about__content--cardIcon about__content--cardIconContent">
+                      <div class="about__content--cardIconContent">
                         <h4 class="about__content--cardIconTitle">
-                          App Design  
+                          App Design
                         </h4>
                         <p class="about__content--cardIconCopy">
                           Lorem Ipsum has been the industry's
@@ -340,8 +347,8 @@
                 </div>
                 <div class="about__content--Doted">
                   <div class="about__content--DotedAnimation">
-                    <div class="about__content--DotedImage">
-                      <img src="assets/object-3.png" alt="" class="about__content--Dotedimg">
+                    <div class="about__content--DotedImage img-fluid">
+                      <img src="assets/object-3.png" alt="" class="about__content--Dotedimg img-fluid">
                     </div>
                   </div>
                 </div>
@@ -356,7 +363,7 @@
       <div class="portfolio__overlay"></div>
       <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-md-12 col-xs-12 col-sm-12">
           <div class="portfolio__col">
             <div class="portfolio__col--wrap">
               <div class="portfolio__col--wrapHeader">
@@ -367,7 +374,7 @@
                   <div class="Menu__body">
                     <h2 class="Menu__bodyTitle">Latest projects</h2>
                   </div>
-                  <div class="Menu__content mr-auto">
+                  <div class="Menu__content">
                     <ul class="Menu__list">
                       <li class="Menu__item" data-filter="*" >
                         all
@@ -395,8 +402,8 @@
                     <div class="row portfolio__row">
                       <div class="col-md-6">
                         <div class="mix category-a" data-order="all">
-                          <div class="card card__portfolio" data-my-order="5">
-                            <img src="assets/project-1.jpg" class="card-img-top card__portfolio--img" alt="...">
+                          <div class="card card__portfolio img-fluid" data-my-order="5">
+                            <img src="assets/project-1.jpg" class="card-img-top card__portfolio--img img-fluid" alt="...">
                             <div class="card-body card__portfolio--body">
                               <h5 class="card-title card__portfolio--title">
                                 MedCare App Design</h5>
@@ -404,8 +411,8 @@
                           </div>
                         </div>
                         <div class="mix category-b" data-order="2">
-                          <div class="card card__portfolio">
-                            <img src="assets/project-3.jpg" class="card-img-top card__portfolio--img" alt="...">
+                          <div class="card card__portfolio img-fluid">
+                            <img src="assets/project-3.jpg" class="card-img-top card__portfolio--img img-fluid" alt="...">
                             <div class="card-body card__portfolio--body">
                               <h5 class="card-title card__portfolio--title">OnlyMe Development</h5>
                             </div>
@@ -414,8 +421,8 @@
                       </div>
                       <div class="col-md-6">
                         <div class="mix category-c" data-order="3">
-                          <div class="card card__portfolio">
-                            <img src="assets/project-2.jpg" class="card-img-top card__portfolio--img" alt="...">
+                          <div class="card card__portfolio img-fluid">
+                            <img src="assets/project-2.jpg" class="card-img-top card__portfolio--img img-fluid" alt="...">
                             <div class="card-body card__portfolio--body">
                               <h5 class="card-title card__portfolio--title">Otto Phone Design
                               </h5>
@@ -423,8 +430,8 @@
                           </div>
                         </div>
                         <div class="mix category-d" data-order="4">
-                          <div class="card card__portfolio">
-                            <img src="assets/project-4.jpg" class="card-img-top card__portfolio--img" alt="...">
+                          <div class="card card__portfolio img-fluid">
+                            <img src="assets/project-4.jpg" class="card-img-top card__portfolio--img img-fluid" alt="...">
                             <div class="card-body card__portfolio--body">
                               <h5 class="card-title card__portfolio--title">iLO App Testing
                               </h5>
@@ -445,7 +452,7 @@
     <div class="slider">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="slider__wrap">
               <div class="slider__wrapSection">
                 <div class="slider__wrapOverlay"></div>
@@ -515,8 +522,8 @@
                       </div>
                       <div class="slider__Triangle">
                         <div class="slider__TriangleAnimation">
-                          <div class="slider__TriangleImage">
-                            <img src="assets/object.png" alt="" class="slider__Triangleimg">
+                          <div class="slider__TriangleImage img-fluid">
+                            <img src="assets/object.png" alt="" class="slider__Triangleimg img-fluid">
                           </div>
                         </div>
                       </div>
@@ -548,36 +555,21 @@
         </div>
       </div>
     </div>
-    <!-- <div class="testimonials">
-      <div class="container">
-        <div class="row testimonials__row">
-          <div class="col testimonials__col">
-            <div class="testimonials__wrap">
-              <div class="testimonials__wrapper">
-                <section class="testimonials__section">
-                  hello
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <!-- news section  -->
     <div class="news">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="news__wrap">
               <div class="news__banner">
                 <div class="container">
                   <div class="row news__row">
-                    <div class="col-md-6">
+                    <div class="col col-xs-6 col-sm-6 col-md-6">
                       <div class="about__concept--about">
                         <h4 class="about__concept--aboutHeading">SUBSCRIPTION
                         </h4>
                       </div>
-                      <div class="about__concept--design">
+                      <div class="about__concept--design about__concept--designNews">
                         <h2 class="about__concept--designTitle news__banner--Title">
                           Get news about my projects
                         </h2>
@@ -588,7 +580,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col col-xs-6 col-sm-6 col-md-6">
                       <form action="" class="news__form">
                         <div class="news__buttonGroup">
                           <div class="news__buttonEmail">
@@ -606,8 +598,8 @@
               </div>
               <div class="news__object">
                 <div class="news__objectAnimation">
-                  <div class="news__objectImages">
-                    <img src="assets/object-2.png" alt="" class="news__objectimg">
+                  <div class="news__objectImages img-fluid">
+                    <img src="assets/object-2.png" alt="" class="news__objectimg img-fluid">
                   </div>
                 </div>
               </div>
@@ -635,7 +627,7 @@
               <ul class="footer__socialList">
                 <li class="footer__socialItem">
                   <a href="" class="footer__socialLink ">
-                    <i class="fab fa-facebook-f 3x"></i>
+                    <i class="fab fa-facebook-f"></i>
                   </a>
                   <a href="" class="footer__socialLink footer__socialLink--twitter">
                     <i class="fab fa-twitter"></i>
